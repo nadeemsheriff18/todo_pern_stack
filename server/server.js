@@ -2,11 +2,11 @@ const PORT =process.env.PORT ?? 3001
 import Express from "express";
 import cors from 'cors';
 import Pg from 'pg';
-import env from "dotenv";
+import dotenv  from "dotenv";
 import { v4 as uuidv4 } from 'uuid';
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
-env.config()
+dotenv.config()
 const app= new Express();
 app.use(Express.json())
 app.use(cors())
